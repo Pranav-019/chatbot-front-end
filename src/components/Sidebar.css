@@ -1,0 +1,138 @@
+.sidebar {
+  width: 280px;
+  background-color: #202123;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #4d4d4f;
+}
+
+.sidebar-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 10px;
+}
+
+.new-chat-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #343541;
+  border: 1px solid #565869;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.new-chat-button:hover {
+  background-color: #40414f;
+}
+
+.sidebar-chats {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.sidebar-footer {
+  padding: 15px;
+  border-top: 1px solid #4d4d4f;
+}
+
+.sidebar-footer-item {
+  color: #8e8ea0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.chat-item {
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.chat-item:hover {
+  background-color: #2a2b32;
+}
+
+.chat-item.active {
+  background-color: #343541;
+}
+
+.chat-item-content {
+  flex: 1;
+  min-width: 0; /* Allows text truncation to work */
+}
+
+.chat-actions {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.chat-item:hover .chat-actions {
+  opacity: 1;
+}
+
+.chat-action-btn {
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #8e8ea0;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.chat-action-btn:hover {
+  background-color: #40414f;
+}
+
+.chat-rename-input {
+  width: 100%;
+  background-color: #40414f;
+  border: 1px solid #565869;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: white;
+  font-size: 14px;
+}
+
+.chat-rename-input:focus {
+  outline: none;
+  border-color: #6b6c7b;
+}
+
+.chat-title {
+  color: white;
+  margin-bottom: 4px;
+}
+
+.chat-preview {
+  display: block;
+  font-size: 12px;
+  color: #8e8ea0;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Update the preview text color */
+.text-muted {
+  color: #ffffff !important; /* Override Bootstrap's text-muted */
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+/* Add responsive styles */
+@media (max-width: 991.98px) {
+  .chat-actions {
+    opacity: 1;
+  }
+} 
