@@ -64,7 +64,7 @@ function App() {
     );
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/get_verse", {
+      const response = await axios.post("http://144.126.138.83/get_verse", {
         query: query,
       }, {
         headers: {
